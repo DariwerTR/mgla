@@ -1,3 +1,7 @@
+# Builds the mod ONLY when you start it by hand: Actions tab -> "build" -> "Run workflow".
+# This file must live at the REPOSITORY ROOT: .github/workflows/build.yml
+# (GitHub ignores workflows in subfolders). The project itself stays in the "whitemist" folder.
+
 name: build
 on:
   workflow_dispatch:
@@ -5,6 +9,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-24.04
+    defaults:
+      run:
+        working-directory: whitemist
     steps:
       - name: checkout repository
         uses: actions/checkout@v6
@@ -26,11 +33,11 @@ jobs:
         with:
           name: whitemist-jar
           path: |
-            build/libs/*.jar
-            !build/libs/*-sources.jar
+            whitemist/build/libs/*.jar
+            !whitemist/build/libs/*-sources.jar
       - name: upload build log
         if: always()
         uses: actions/upload-artifact@v7
         with:
           name: build-log
-          path: build.log
+          path: whitemist/build.log
