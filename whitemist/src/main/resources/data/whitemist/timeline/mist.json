@@ -1,0 +1,41 @@
+{
+	"clock": "whitemist:mist",
+	"tracks": {
+		"minecraft:visual/fog_start_distance": {
+			"modifier": "alpha_blend",
+			"keyframes": [
+				{ "ticks": 0, "value": { "value": 0.0, "alpha": 0.0 } },
+				{ "ticks": 480, "value": { "value": 0.0, "alpha": 0.488 } },
+				{ "ticks": 960, "value": { "value": 0.0, "alpha": 0.784 } },
+				{ "ticks": 1440, "value": { "value": 0.0, "alpha": 0.936 } },
+				{ "ticks": 1920, "value": { "value": 0.0, "alpha": 0.992 } },
+				{ "ticks": 2400, "value": { "value": 0.0, "alpha": 1.0 } }
+			]
+		},
+		"minecraft:visual/fog_end_distance": {
+			"modifier": "alpha_blend",
+			"keyframes": [
+				{ "ticks": 0, "value": { "value": 22.0, "alpha": 0.0 } },
+				{ "ticks": 480, "value": { "value": 22.0, "alpha": 0.488 } },
+				{ "ticks": 960, "value": { "value": 22.0, "alpha": 0.784 } },
+				{ "ticks": 1440, "value": { "value": 22.0, "alpha": 0.936 } },
+				{ "ticks": 1920, "value": { "value": 22.0, "alpha": 0.992 } },
+				{ "ticks": 2400, "value": { "value": 22.0, "alpha": 1.0 } }
+			]
+		},
+		"minecraft:visual/fog_color": {
+			"modifier": "add",
+			"keyframes": [
+				{ "ticks": 0, "value": "#000000" },
+				{ "ticks": 2400, "value": "#262a2d" }
+			]
+		},
+		"minecraft:visual/sky_color": {
+			"modifier": "multiply",
+			"keyframes": [
+				{ "ticks": 0, "value": "#ffffff" },
+				{ "ticks": 2400, "value": "#8c9296" }
+			]
+		}
+	}
+}

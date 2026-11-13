@@ -1,0 +1,16 @@
+{
+	"entity.whitemist.listener": "Listener",
+	"message.whitemist.mist_rising": "The white mist is thickening...",
+	"message.whitemist.mist_peak": "The mist has closed in. Stay quiet.",
+	"message.whitemist.mist_fading": "The mist is thinning...",
+	"message.whitemist.mist_cleared": "The mist has lifted.",
+	"phase.whitemist.clear": "clear",
+	"phase.whitemist.rising": "thickening",
+	"phase.whitemist.active": "thick",
+	"phase.whitemist.fading": "thinning",
+	"command.whitemist.status": "Mist: %s | density %s/100 | mists survived: %s | Listeners nearby: %s",
+	"command.whitemist.not_running": "No world is running yet.",
+	"command.whitemist.started": "The mist begins to thicken.",
+	"command.whitemist.stopped": "The mist begins to thin.",
+	"command.whitemist.reloaded": "White Mist config reloaded."
+}

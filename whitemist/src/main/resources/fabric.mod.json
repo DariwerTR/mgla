@@ -1,0 +1,28 @@
+{
+	"schemaVersion": 1,
+	"id": "whitemist",
+	"version": "${version}",
+	"name": "White Mist",
+	"description": "A thick white mist rolls over the world. Blind creatures hunt by sound. Stay quiet, walk on wool.",
+	"authors": [
+		"WhiteMist contributors"
+	],
+	"contact": {},
+	"license": "MIT",
+	"icon": "assets/whitemist/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.whitemist.WhiteMist"
+		],
+		"client": [
+			"com.whitemist.client.WhiteMistClient"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.20.1",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}

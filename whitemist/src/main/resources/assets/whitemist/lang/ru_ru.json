@@ -1,0 +1,16 @@
+{
+	"entity.whitemist.listener": "Слушатель",
+	"message.whitemist.mist_rising": "Белая мгла сгущается...",
+	"message.whitemist.mist_peak": "Мгла сомкнулась. Не шумите.",
+	"message.whitemist.mist_fading": "Мгла редеет...",
+	"message.whitemist.mist_cleared": "Мгла рассеялась.",
+	"phase.whitemist.clear": "ясно",
+	"phase.whitemist.rising": "сгущается",
+	"phase.whitemist.active": "густая",
+	"phase.whitemist.fading": "рассеивается",
+	"command.whitemist.status": "Мгла: %s | плотность %s/100 | пережито волн: %s | Слушателей рядом: %s",
+	"command.whitemist.not_running": "Мир ещё не запущен.",
+	"command.whitemist.started": "Мгла начинает сгущаться.",
+	"command.whitemist.stopped": "Мгла начинает редеть.",
+	"command.whitemist.reloaded": "Конфиг Белой мглы перезагружен."
+}
