@@ -1,0 +1,41 @@
+# Builds the mod ONLY when you start it by hand: Actions tab -> "build" -> "Run workflow".
+# It never runs on push or pull request.
+# The finished jar is attached to the run as the "whitemist-jar" artifact.
+# If the build fails, the full compiler output is attached as "build-log" so it can be copied and sent for a fix.
+
+name: build
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v6
+      - name: validate gradle wrapper
+        uses: gradle/actions/wrapper-validation@v6
+      - name: setup jdk
+        uses: actions/setup-java@v5
+        with:
+          java-version: '25'
+          distribution: 'microsoft'
+      - name: make gradle wrapper executable
+        run: chmod +x ./gradlew
+      - name: build
+        run: |
+          set -o pipefail
+          ./gradlew build --console=plain --stacktrace 2>&1 | tee build.log
+      - name: upload jar
+        uses: actions/upload-artifact@v7
+        with:
+          name: whitemist-jar
+          path: |
+            build/libs/*.jar
+            !build/libs/*-sources.jar
+      - name: upload build log
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: build-log
+          path: build.log
